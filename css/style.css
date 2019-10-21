@@ -1,0 +1,83 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: #000;
+  width: 100%;
+  display: block;
+  position: relative;
+}
+.container .particles-js {
+  width: 100%;
+  height: 100%;
+}
+.container .overlay {
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+.container .content {
+  display: block;
+  margin: auto;
+  position: relative;
+  z-index: 999;
+}
+.container .content img {
+  width: 314px;
+  height: 416px;
+}
+.container .content h1 {
+  color: #fff;
+  text-transform: capitalize;
+  position: absolute;
+  top: 73%;
+  left: 10%;
+  font-family: "Righteous", cursive;
+  letter-spacing: 4px;
+}
+.container .content h1 .dot {
+  background: #fff;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 5px;
+  opacity: 0;
+}
+.container .social {
+  position: absolute;
+  z-index: 999;
+  right: 10px;
+  bottom: 20px;
+}
+.container .social a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px;
+  font-size: 20px;
+  -webkit-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.container .social a:first-of-type:hover {
+  color: #00f;
+  font-size: 25px;
+}
+.container .social a:last-of-type:hover {
+  color: #09e;
+  font-size: 25px;
+}
+
+/*# sourceMappingURL=style.css.map */

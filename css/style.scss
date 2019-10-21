@@ -1,0 +1,91 @@
+//mixin
+@mixin prefix($name, $value...) {
+  -webkit-#{$name}: $value;
+  -ms-#{$name}: $value;
+  -moz-#{$name}: $value;
+  -o-#{$name}: $value;
+  #{$name}: $value;
+}
+//mixin
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  background-color: #000;
+  width: 100%;
+  display: block;
+  position: relative;
+  .particles-js {
+    width: 100%;
+    height: 100%;
+  }
+  .overlay{
+      background: rgba(0,0,0,0.3);
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width:100%;
+      display: flex;
+      align-content: center;
+      align-items: center;
+  }
+  .content{
+        display: block;
+        margin: auto;
+        position: relative;
+        z-index: 999;
+        img{
+            width: 314px;
+            height: 416px;
+        }
+        h1{
+            color:#fff;
+            text-transform: capitalize;
+            position: absolute;
+            top: 73%;
+            left: 10%;
+            font-family: 'Righteous', cursive;
+            letter-spacing: 4px;
+            .dot{
+                background:#fff;
+                width:10px;
+                height:10px;
+                border-radius: 50%;
+                display: inline-block;
+                margin-left: 5px;
+                opacity: 0;
+            }
+        }
+    }
+    .social{
+        position: absolute;
+        z-index: 999;
+        right:10px;
+        bottom:20px;
+        a{
+            color:#fff;
+            text-decoration: none;
+            padding: 5px;
+            font-size: 20px;
+            @include prefix(transition, all 0.3s linear);
+            &:first-of-type{
+                &:hover{
+                    color:#00f;
+                    font-size: 25px;
+                }
+            }
+             &:last-of-type{
+                &:hover{
+                    color:#09e;
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}
